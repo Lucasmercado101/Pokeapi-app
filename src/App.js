@@ -4,6 +4,7 @@ import "./main.sass";
 import NotFound from "./Views/NotFound";
 import Landing from "./Views/Landing/Landing";
 import Search from "./Views/Search/Search";
+import Item from "./Views/Item/Item";
 import Berry from "./Views/Berry/Berry";
 import Navbar from "./Views/Navbar/Navbar";
 import Pokemon from "./Views/Pokemon/Pokemon";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/:searchTerm" exact component={Search} />
         <Route path="/berry/:berry" exact component={Berry} />
         <Route path="/pokemon/:pokemon" exact component={Pokemon} />
+        <Route path="/item/:item" exact component={Item} />
         <Route component={NotFound} />
       </Switch>
     </Router>

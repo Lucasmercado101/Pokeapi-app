@@ -4,33 +4,36 @@ import "./search.sass";
 const pokeApi = "https://pokeapi.co/api/v2/";
 
 export default function Pokemons(props) {
-  const [searchResultList, setPokemonsList] = useState({});
+  const [searchResultList, setSearchResults] = useState({});
+
+  const capitalizeFirstLetter = (string) =>
+    string.replace(/^\w/, (c) => c.toUpperCase());
 
   useEffect(() => {
-    console.log();
     fetch(pokeApi + props.match.params.searchTerm, { method: "GET" })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
-        setPokemonsList(data);
+        document.title =
+          capitalizeFirstLetter(props.match.params.searchTerm) + "(s) results";
+        setSearchResults(data);
       });
   }, []);
 
   const nextResults = () => {
-    setPokemonsList({});
+    setSearchResults({});
     fetch(searchResultList.next, { method: "GET" })
       .then((resp) => resp.json())
       .then((data) => {
-        setPokemonsList(data);
+        setSearchResults(data);
       });
   };
 
   const previousResults = () => {
-    setPokemonsList({});
+    setSearchResults({});
     fetch(searchResultList.previous, { method: "GET" })
       .then((resp) => resp.json())
       .then((data) => {
-        setPokemonsList(data);
+        setSearchResults(data);
       });
   };
 
@@ -54,7 +57,7 @@ export default function Pokemons(props) {
               className="searchResultsList__item"
               to={`/${props.match.params.searchTerm}/${item.name}`}
             >
-              <li>{item.name}</li>
+              <li>{item.name.split("-").join(" ")}</li>
             </Link>
           ))}
       </ul>

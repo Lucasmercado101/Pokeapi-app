@@ -8,18 +8,19 @@ const pokeApi = "https://pokeapi.co/api/v2/";
 export default function Pokemon(props) {
   const [pokemonData, setPokemonData] = useState({});
 
+  const capitalizeFirstLetter = (string) =>
+    string.replace(/^\w/, (c) => c.toUpperCase());
+
   useEffect(() => {
     fetch(pokeApi + "pokemon/" + props.match.params.pokemon, { method: "GET" })
       .then((resp) => resp.json())
       .then((data) => {
+        document.title = capitalizeFirstLetter(data.name);
         setPokemonData(data);
       });
 
     return () => setPokemonData({});
   }, [props.match.params.pokemon]);
-
-  const capitalizeFirstLetter = (string) =>
-    string.replace(/^\w/, (c) => c.toUpperCase());
 
   return (
     <article className="pokemon">

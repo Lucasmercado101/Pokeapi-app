@@ -5,10 +5,13 @@ import { getBerry } from "../../api";
 function Berry(props) {
   const [berryData, setBerryData] = useState({});
 
+  const capitalizeFirstLetter = (string) =>
+    string.replace(/^\w/, (c) => c.toUpperCase());
+
   useEffect(() => {
     getBerry(props.match.params.berry).then((data) => {
+      document.title = capitalizeFirstLetter(data.name);
       setBerryData(data);
-      console.log(data);
     });
     return () => setBerryData({});
   }, [props.match.params.berry]);
@@ -20,7 +23,7 @@ function Berry(props) {
           <thead>
             <tr>
               <td className="berryName" colSpan="2">
-                {berryData.name}
+                {capitalizeFirstLetter(berryData.name)}
               </td>
             </tr>
           </thead>

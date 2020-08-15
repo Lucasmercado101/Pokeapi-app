@@ -5,3 +5,8 @@ export const getBerry = (berry) => {
     resp.json()
   );
 };
+export const getItem = (item) => {
+  return fetch(`${pokeApiUrl}/item/${item}`, { method: "GET" }).then((resp) =>
+    resp.json()
+  );
+};
