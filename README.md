@@ -1,3 +1,7 @@
+App that fetches and displays data using the https://pokeapi.co/ API.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
