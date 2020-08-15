@@ -21,8 +21,9 @@ export default function (props) {
     e.preventDefault();
     switch (searchOption) {
       case "Pokeball":
-        props.history.push(`/pokemon/${searchValue}`);
-        return;
+        return props.history.push(`/pokemon/${searchValue}`);
+      case "Berry":
+        return props.history.push(`/berry/${searchValue}`);
       default:
         throw Error();
     }

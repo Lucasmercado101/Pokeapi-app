@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import "./pokemon.sass";
 import DropdownDetails from "../../Components/dropdownDetails";
+import LoadingRing from "../../Components/LoadingRing";
 const pokeApi = "https://pokeapi.co/api/v2/";
 
 export default function Pokemon(props) {
@@ -23,7 +23,7 @@ export default function Pokemon(props) {
 
   return (
     <article className="pokemon">
-      {Object.keys(pokemonData).length > 0 && (
+      {Object.keys(pokemonData).length > 0 ? (
         <>
           <table>
             <thead>
@@ -167,6 +167,8 @@ export default function Pokemon(props) {
             </DropdownDetails>
           </section>
         </>
+      ) : (
+        <LoadingRing centered />
       )}
     </article>
   );
