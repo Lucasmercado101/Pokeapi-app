@@ -1,4 +1,4 @@
-App that fetches and displays data using the https://pokeapi.co/ API.
+# App that fetches and displays data using the https://pokeapi.co/ API.
 
 ---
 
