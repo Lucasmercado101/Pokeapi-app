@@ -1,0 +1,117 @@
+.navbar 
+    position: sticky
+    width: 100%
+    background-color: rgb(70, 142, 236)
+    color: black
+    height: 58px
+    box-shadow: 0px 11px 14px 0px rgba(0,0,0,0.18)
+    display: flex
+    align-items: center
+    top: 0
+    z-index: 1000
+    *
+        margin: 0
+        padding: 0
+
+
+.pokeApi-icon
+    background: transparent
+    border: none
+    flex-grow: 1
+    text-align: left
+    margin-left: 15px
+    img 
+        cursor: pointer
+        height: 50px
+
+.searchBar
+    display: flex
+    align-items: center
+    margin: auto 25px auto 0
+
+    label, input
+        font-size: 1.5rem
+    
+    
+    input
+        color: white
+        background: transparent
+        border: none
+        border-bottom: medium solid black
+        max-width: 0
+        transition: max-width 350ms ease-out
+
+        &:focus
+            right: 0
+            max-width: 200px   
+
+.searchIcon
+    display: grid
+    place-items: center
+    margin-right: 5px
+    height: 45px
+    cursor: pointer
+
+.picker
+    position: relative
+    width: 75px
+    margin-right: 10px
+    &__current
+        cursor: pointer
+        width: 100%
+        border: thin solid white
+        padding: 5px
+        border-radius: 10px
+        background-color: white
+        display: flex
+        align-items: center
+        transition-delay: .1s
+        &--open
+            transition-delay: 0.0s
+            border-radius: 10px 10px 0 0
+
+    &__menuButton
+        margin-left: 5px
+
+    &__options
+        position: absolute
+        transition: all .1s linear
+        transform-origin: top
+        width: 100%
+        background-color: white
+        display: flex
+        clip-path: inset(0 0 100% 0)
+        flex-direction: column
+        
+        
+        button
+            margin: 8px 0
+            cursor: pointer
+            background: none
+            border: none
+
+
+        &--hidden
+            pointer-events: none
+
+        &--shown
+            clip-path: inset(0 0 0 0)
+            max-height: 100vh
+            border-radius: 0 0 10px 10px
+
+
+@media ( max-width: 600px )
+
+    .searchIcon img
+        height: 40px
+
+    .searchBar
+        input
+            font-size: 1.2rem
+            &:focus
+                font-size: 1.2rem
+                max-width: 100px
+
+    .picker
+        margin: 0
+        transform: scale(.9)

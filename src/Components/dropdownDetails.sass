@@ -1,0 +1,41 @@
+
+.dropdown 
+
+    &__label
+        user-select: none
+        text-align: center
+        position: relative
+        display: block
+        position: relative
+        background: rgb(96, 110, 33)
+        color: white
+        font-size: 1.5rem
+        cursor: pointer
+        padding: 0.4rem 1.5rem
+
+        &:hover
+            background: rgb(50, 58, 13)
+    
+    ul
+        list-style: none
+        max-height: 0
+        overflow: auto
+        width: 100%
+        padding: 0
+        margin: 0
+        background-color: white
+        transform-origin: top
+        transition: all 250ms ease-out
+        li
+            color: black
+            margin-left: 15px
+            padding: 3px 0
+        
+    &__checkbox
+        display: none
+        
+        &:checked ~ ul
+            max-height: 250px
+
+
+
