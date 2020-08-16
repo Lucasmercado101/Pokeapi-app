@@ -1,4 +1,5 @@
-# App that fetches and displays data using the https://pokeapi.co/ API.
+App that fetches and displays data using the https://pokeapi.co/ API.
+Made to practice fetching and displaying API data.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
