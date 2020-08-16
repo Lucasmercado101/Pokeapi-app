@@ -7,13 +7,14 @@ import PikachuFace from "../../Images/pikachuface.svg";
 import Pokeball from "../../Images/pokeball.svg";
 import Berry from "../../Images/grape.svg";
 import Item from "../../Images/shoppingBag.svg";
+import Location from "../../Images/planet.svg";
 
 export default function (props) {
   const [searchValue, setSearchValue] = useState("");
   const [searchOption, setSearchOption] = useState("Pokeball");
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
-  const options = { Pokeball, Berry, Item };
+  const options = { Pokeball, Berry, Item, Location };
 
   const searchBy = (iconName) => {
     setIsOpen(false);
@@ -30,6 +31,8 @@ export default function (props) {
         return props.history.push(`/berry/${searchTerm}`);
       case "Item":
         return props.history.push(`/item/${searchTerm}`);
+      case "Location":
+        return props.history.push(`/location/${searchTerm}`);
       default:
         throw Error();
     }
@@ -67,7 +70,7 @@ export default function (props) {
           onClick={() => setIsOpen(!isOpen)}
           className={`picker__current ${isOpen ? "picker__current--open" : ""}`}
         >
-          <img height="40" src={options[searchOption]} alt="Menu" />
+          <img height="40" width="40" src={options[searchOption]} alt="Menu" />
           <img
             height="20"
             className="picker__menuButton"

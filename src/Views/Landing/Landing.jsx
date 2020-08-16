@@ -21,6 +21,9 @@ function Landing() {
           <li className="browseLinksList__item">
             <Link to="/item">Items</Link>
           </li>
+          <li className="browseLinksList__item">
+            <Link to="/location">Locations</Link>
+          </li>
         </ul>
       </header>
     </div>

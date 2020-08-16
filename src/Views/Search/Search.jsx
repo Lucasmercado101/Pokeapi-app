@@ -11,12 +11,17 @@ export default function Pokemons(props) {
 
   useEffect(() => {
     fetch(pokeApi + props.match.params.searchTerm, { method: "GET" })
-      .then((resp) => resp.json())
+      .then((resp) => {
+        if (resp.ok) return resp.json();
+        else throw Error(resp.statusText);
+      })
       .then((data) => {
         document.title =
           capitalizeFirstLetter(props.match.params.searchTerm) + "(s) results";
         setSearchResults(data);
-      });
+      })
+      .catch((err) => alert(err));
+    return () => setSearchResults({});
   }, [props.match.params.searchTerm]);
 
   const nextResults = () => {

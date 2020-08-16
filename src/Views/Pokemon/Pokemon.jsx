@@ -81,19 +81,6 @@ export default function Pokemon(props) {
                   </table>
                 </td>
               </tr>
-              {/* <tr>
-                <th>Stats</th>
-                <td>
-                  {pokemonData.stats.map((data, i) => (
-                    <div key={i} style={{ display: "table-row" }}>
-                      <p style={{ display: "table-cell" }}>{data.stat.name}</p>
-                      <p style={{ display: "table-cell" }} key={i}>
-                        {data.base_stat}
-                      </p>
-                    </div>
-                  ))}
-                </td>
-              </tr> */}
             </tbody>
           </table>
           <section className="section">
