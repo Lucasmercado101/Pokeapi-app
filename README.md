@@ -1,5 +1,7 @@
 App that fetches and displays data using the https://pokeapi.co/ API.
-Made to practice fetching and displaying API data.
+Made to practice fetching and displaying API data. https://lucasmercado101.github.io/Pokeapi-app/
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
