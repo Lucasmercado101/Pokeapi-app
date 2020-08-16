@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Pokeapi-app/static/css/main.d322556e.chunk.css",
+    "main.js": "/Pokeapi-app/static/js/main.e6317fd8.chunk.js",
+    "main.js.map": "/Pokeapi-app/static/js/main.e6317fd8.chunk.js.map",
+    "runtime-main.js": "/Pokeapi-app/static/js/runtime-main.f5b1a53f.js",
+    "runtime-main.js.map": "/Pokeapi-app/static/js/runtime-main.f5b1a53f.js.map",
+    "static/js/2.a8b827cf.chunk.js": "/Pokeapi-app/static/js/2.a8b827cf.chunk.js",
+    "static/js/2.a8b827cf.chunk.js.map": "/Pokeapi-app/static/js/2.a8b827cf.chunk.js.map",
+    "index.html": "/Pokeapi-app/index.html",
+    "precache-manifest.bb0afe71b485849ef9412168b30ba1ec.js": "/Pokeapi-app/precache-manifest.bb0afe71b485849ef9412168b30ba1ec.js",
+    "service-worker.js": "/Pokeapi-app/service-worker.js",
+    "static/css/main.d322556e.chunk.css.map": "/Pokeapi-app/static/css/main.d322556e.chunk.css.map",
+    "static/js/2.a8b827cf.chunk.js.LICENSE.txt": "/Pokeapi-app/static/js/2.a8b827cf.chunk.js.LICENSE.txt",
+    "static/media/arrow.svg": "/Pokeapi-app/static/media/arrow.7da2026c.svg",
+    "static/media/grape.svg": "/Pokeapi-app/static/media/grape.a5e21982.svg",
+    "static/media/pikachuface.svg": "/Pokeapi-app/static/media/pikachuface.a7662a63.svg",
+    "static/media/planet.svg": "/Pokeapi-app/static/media/planet.36d18d8b.svg",
+    "static/media/pokeball.svg": "/Pokeapi-app/static/media/pokeball.6b4ffa55.svg",
+    "static/media/search.svg": "/Pokeapi-app/static/media/search.3cd8358d.svg",
+    "static/media/shoppingBag.svg": "/Pokeapi-app/static/media/shoppingBag.168b3cc5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5b1a53f.js",
+    "static/js/2.a8b827cf.chunk.js",
+    "static/css/main.d322556e.chunk.css",
+    "static/js/main.e6317fd8.chunk.js"
+  ]
+}
