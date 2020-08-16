@@ -17,7 +17,7 @@ export default function Pokemons(props) {
           capitalizeFirstLetter(props.match.params.searchTerm) + "(s) results";
         setSearchResults(data);
       });
-  }, []);
+  }, [props.match.params.searchTerm]);
 
   const nextResults = () => {
     setSearchResults({});

@@ -13,7 +13,7 @@ function Item(props) {
     getItem(props.match.params.item).then((data) => {
       setItemData(data);
     });
-  }, []);
+  }, [props.match.params.item]);
 
   return (
     <article className="item">
@@ -25,25 +25,34 @@ function Item(props) {
                 {capitalizeFirstLetter(itemData.name).split("-").join(" ")}
               </td>
             </tr>
+            <tr>
+              <td colSpan="2">
+                <img src={itemData.sprites.default} alt={itemData.name} />
+              </td>
+            </tr>
           </thead>
           <tbody>
-            {/* <tr>
-          <th>Firmness</th>
-          <td>{itemData.firmness.name}</td>
-        </tr> */}
-            {/* <tr>
-          <th>Flavors</th>
-          <td>
-            <ul className="berryFlavors">
-              {itemData.flavors.map((item, i) => (
-                <li key={i}>{item.flavor.name}</li>
-              ))}
-            </ul>
-          </td>
-        </tr> */}
             <tr>
-              {/* <th>Natural gift type</th>
-          <td>{itemData.natural_gift_type.name}</td> */}
+              <th>Cost</th>
+              <td>{itemData.cost}</td>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <td>{itemData.category.name.split("-").join(" ")}</td>
+            </tr>
+            <tr>
+              <th>Attributes</th>
+              <td>
+                <ul className="itemAttributes">
+                  {itemData.attributes.map((item, i) => (
+                    <li key={i}>{item.name}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Effect</th>
+              <td>{itemData.effect_entries[0].short_effect}</td>
             </tr>
           </tbody>
         </table>

@@ -38,6 +38,7 @@ export default function Pokemon(props) {
               <tr>
                 <td colSpan="2">
                   <img
+                    alt={pokemonData.name}
                     src={
                       pokemonData.sprites.other["official-artwork"]
                         .front_default
